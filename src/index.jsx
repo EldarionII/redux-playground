@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 
 import './styles/index.scss';
 
-import App from './components/App';
+import {Router} from './router';
 
 
-
-ReactDOM.render(<App/>, document.getElementById('root'));
+ReactDOM.render(<Router/>, document.getElementById('root'));
