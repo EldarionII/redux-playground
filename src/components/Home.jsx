@@ -1,10 +1,14 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
+import {connect} from 'react-redux'
 
 import {MainHeader} from "./MainHeader";
 
-export default class Home extends React.Component {
-    render () {
+class Home extends React.Component {
+    render() {
+        const {users} = this.props;
+
         return (
             <React.Fragment>
                 <MainHeader/>
@@ -17,6 +21,9 @@ export default class Home extends React.Component {
                     <main>
                         <section>
                             <h2>Ссылки</h2>
+                            <div>
+                                Имя текущего пользователя - {users.current.name}
+                            </div>
                             <ul>
                                 <li>
                                     <Link to={'/profile'}>Профиль пользователя</Link>
@@ -29,3 +36,9 @@ export default class Home extends React.Component {
         )
     }
 }
+
+const mapStateToProps = state => ({
+    users: state.users
+});
+
+export default withRouter(connect(mapStateToProps)(Home))
