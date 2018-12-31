@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "build": "webpack -p",
-    "build-dev": "webpack -d"
+    "build-dev": "webpack -d",
+    "server": "node dev-server.js"
   },
   "dependencies": {
     "react": "^16.7.0",
@@ -22,6 +23,7 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.28.3",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
   }
 }
