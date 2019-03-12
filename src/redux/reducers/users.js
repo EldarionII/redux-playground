@@ -1,6 +1,7 @@
 import {USERS} from "../../constants/users";
 
 const defaultStaate = {
+    users: [],
     current: {
         name: 'Bob'
     }
