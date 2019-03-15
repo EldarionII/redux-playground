@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {MainHeader} from "./MainHeader";
+import {SiteHeader} from "./Common/SiteHeader";
 import {UsersReduxApi} from "../redux/api";
 import {withRouter} from "react-router-dom";
 import {connect} from "react-redux";
@@ -19,7 +19,7 @@ class Profile extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <MainHeader/>
+                <SiteHeader/>
                 <main>
                     <header>
                         <h1>

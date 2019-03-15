@@ -1,3 +1,5 @@
+@import "constants/index";
+
 @font-face {
   font-family: "ProximaNova";
   src: url("../fonts/ProximaNova-Regular.eot") format("eot"),
@@ -12,4 +14,19 @@
   src: url("../fonts/ProximaNova-Semibold.eot") format("eot"),
   url("../fonts/ProximaNova-Semibold.woff") format("woff"),
   url("../fonts/ProximaNova-Semibold.ttf") format("truetype");
+}
+
+
+
+html {
+  font-family: ProximaNova;
+  font-size: $size-base;
+}
+
+body {
+  font-size: $size-m;
+}
+
+h1 {
+  font-size: $size-xl;
 }

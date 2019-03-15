@@ -1,0 +1,28 @@
+.site-header {
+  background-color: #282c34;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 50px;
+  }
+
+  a {
+    color: white;
+
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

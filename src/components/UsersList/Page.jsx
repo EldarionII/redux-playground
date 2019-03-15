@@ -1,5 +1,5 @@
 import React from 'react'
-import {MainHeader} from "../MainHeader";
+import {SiteHeader} from "../Common/SiteHeader";
 import {UsersReduxApi} from "../../redux/api";
 import UsersList from "./List/Container";
 
@@ -11,7 +11,7 @@ export default class UsersPage extends React.Component {
     render() {
         return (
             <section>
-                <MainHeader/>
+                <SiteHeader/>
                 <UsersList/>
             </section>
         )
