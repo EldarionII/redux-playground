@@ -1,3 +1,60 @@
 @import "./fonts";
 @import "reset";
 @import "common/index";
+@import "constants/index";
+@import "users/index";
+
+html {
+  background: $c-primary-normal;
+  color: $c-primary-text;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: $c-primary-text;
+
+  &:hover, &:active {
+    text-decoration: underline;
+    color: white;
+  }
+
+  &:focus {
+    color: white;
+  }
+}
+
+input {
+  height: 9rem;
+  width: 200px;
+  padding: 1rem;
+}
+
+button {
+  height: 9rem;
+}
+
+.styles_modal__gNwvD {
+  padding: 0;
+  background: transparent;
+
+  .styles_closeButton__20ID4 {
+    display: flex;
+    height: $size-xl;
+    width: $size-xl;
+    top: -$size-s;
+    right: -$size-s;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: $c-secondary-light;
+
+    svg {
+      height: 6rem;
+      width: 6rem;
+      fill: $c-secondary-text
+    }
+  }
+}

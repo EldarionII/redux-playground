@@ -4,6 +4,9 @@ const defaultStaate = {
     users: [],
     current: {
         name: 'Bob'
+    },
+    modals: {
+        [USERS.MODALS.USER_NEW]: {isOpen: false}
     }
 };
 
@@ -18,6 +21,16 @@ export const users = (state = defaultStaate, action) => {
             return {
                 ...state,
                 current: action.current
+            };
+        case  USERS.ACTIONS.MODAL_TOGGLE:
+            return {
+                ...state,
+                modals: {
+                    ...state.modals,
+                    [action.modal]: {
+                        isOpen: !state.modals[action.modal].isOpen
+                    }
+                }
             };
         default:
             return state

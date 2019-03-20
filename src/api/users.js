@@ -6,6 +6,10 @@ export class UsersApi {
     }
 
     static userCreate(user) {
-        return axios.post('https://localhost:3000/api/users',user)
+        return axios.post('https://localhost:3000/api/users', user)
+    }
+
+    static userDelete(userId) {
+        return axios.delete(`https://localhost:3000/api/users/${userId}`)
     }
 }

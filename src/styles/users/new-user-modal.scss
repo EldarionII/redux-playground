@@ -1,0 +1,24 @@
+.new-user-modal {
+  background: $c-secondary-normal;
+  padding: $size-xl;
+  border: 1rem solid $c-secondary-light;
+  border-radius: 2rem;
+  color: $c-secondary-text;
+
+  &__title {
+    margin-bottom: $size-m;
+  }
+
+  &_list {
+    margin-bottom: $size-s;
+  }
+
+  &_item {
+    margin-bottom: 2rem;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+  }
+}

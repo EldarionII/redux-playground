@@ -3,7 +3,7 @@ import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom'
 
 import Home from './components/Home'
 import Profile from './components/Profile'
-import Users from "./components/UsersList/Page";
+import Users from "./components/Users/Page";
 
 export class Router extends React.Component
 {
