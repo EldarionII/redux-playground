@@ -1,6 +1,7 @@
 import {store} from "../store";
 import {UsersActions} from "../actions";
 import {UsersApi} from "../../api/users";
+import {USERS} from "../../constants/users";
 
 export class UsersReduxApi {
     static currentGet = current => {
@@ -17,5 +18,13 @@ export class UsersReduxApi {
 
     static userCreate = user => {
         return UsersApi.userCreate(user)
+    };
+
+    static userDelete = userId => {
+        return UsersApi.userDelete(userId)
+    };
+
+    static userModalToggleNewUser = () => {
+        store.dispatch(UsersActions.usersModalToggle(USERS.MODALS.USER_NEW))
     };
 }

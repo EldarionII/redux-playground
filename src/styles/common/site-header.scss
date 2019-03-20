@@ -1,5 +1,5 @@
 .site-header {
-  background-color: #282c34;
+  background-color: $c-primary-dark;
 
   &__container {
     display: flex;
@@ -10,11 +10,6 @@
   &__logo {
     animation: App-logo-spin infinite 20s linear;
     height: 50px;
-  }
-
-  a {
-    color: white;
-
   }
 }
 
