@@ -7,7 +7,7 @@ export default class UserPresentational extends React.Component {
         return (
             <section>
                 <img className={'user__avatar'}/>
-                {user.name}
+                <input defaultValue={user.first_name}/>
                 {user.email}
             </section>
         )

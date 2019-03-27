@@ -4,30 +4,47 @@ import UsersListPresentational from "./Presentational";
 import {UsersReduxApi} from "../../../redux/api";
 
 class UsersListContainer extends React.Component {
-    toggleModal = () => {
-        UsersReduxApi.userModalToggleNewUser()
-    };
+	toggleModal = () => {
+		UsersReduxApi.userModalToggleNewUser()
+	};
 
-    deleteUser = userId => {
-        UsersReduxApi.userDelete(userId)
-            .then(() => UsersReduxApi.usersGet())
-    };
+	updateUserOnEnter = (userId, e) => {
+		if (e.keyCode === 13) {
+			this.updateUser(userId,e)
+		}
+	};
 
-    render() {
-        const {users} = this.props;
+		updateUser = (userId, e) => {
+		const user = {
+			[e.target.name]: e.target.value
+		};
 
-        return (
-            <UsersListPresentational users={users}
-                                     toggleModal={this.toggleModal}
-                                     createNewUser={this.createNewUser}
-                                     deleteUser={this.deleteUser}
-            />
-        )
-    }
+		UsersReduxApi.userUpdate(userId, user)
+			.then(() => UsersReduxApi.usersGet())
+	};
+
+	deleteUser = userId => {
+		UsersReduxApi.userDelete(userId)
+			.then(() => UsersReduxApi.usersGet())
+	};
+
+	render() {
+		const {users} = this.props;
+
+		return (
+			<UsersListPresentational users={users}
+															 toggleModal={this.toggleModal}
+															 createNewUser={this.createNewUser}
+															 updateUser={this.updateUser}
+															 updateUserOnEnter={this.updateUserOnEnter}
+															 deleteUser={this.deleteUser}
+			/>
+		)
+	}
 }
 
 const mapStateToProps = state => ({
-    users: state.users
+	users: state.users
 });
 
 export default connect(mapStateToProps)(UsersListContainer)
